@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label 'host'}
     stages {
         stage('Build') {
             steps {
@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo "DEPLOYMENT COMPLETED AGAIN.... !!!!"
+                echo "DEPLOYMENT COMPLETED AGAIN at night.... !!!!"
             }
         }
     }
